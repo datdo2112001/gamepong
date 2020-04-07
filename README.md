@@ -7,4 +7,4 @@ bắt người trốn cách ly , bạn sẽ có 3 máu , nếu để virus chạ
 khi nó chạm vào người bạn , và bạn cx phải bắt người trốn cách ly , nếu người trốn cách li chạm vào virus thì họ cx biến thành 1 vật thể
 trung gian và khiến bạn mất máu nếu chạm phải , 1 màn sẽ có thời gian là 5 phút , bạn có thể qua màn sớm nếu làm hết nv , mỗi màn dc tính
 1 ngày , nếu bạn thắng 14 màn liên tục , tức là sau 14 ngày ko có ca nhiễm mới , thành phố của bạn sẽ cách li virus thành công , you win ,
-và bạn sẽ giành chiến thắng , good luck!
+và bạn sẽ giành chiến thắng !
