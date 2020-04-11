@@ -1,7 +1,8 @@
 #include <iostream>
 #include <SDL.h>
 #include <bits/stdc++.h>
-
+#include <SDL_image.h>
+#include "action.h"
 
 using namespace std;
 void logSDLError(std::ostream& os,
@@ -12,64 +13,6 @@ const string WINDOW_TITLE = "An Implementation of Code.org Painter";
 
 void initSDL(SDL_Window* &window, SDL_Renderer* &renderer);
 void quitSDL(SDL_Window* window, SDL_Renderer* renderer);
-struct character{
-    int x;
-int y;
-int size=10;
-int m=1;
-void render(SDL_Renderer* renderer){
-SDL_Rect filled_rect;
-    filled_rect.x = x;
-    filled_rect.y = y;
-    filled_rect.w = size;
-    filled_rect.h = size;
-    SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255); // green
-    SDL_RenderFillRect(renderer, &filled_rect);
-
-}
-void left(){
-  x-=15;
-}
-void right(){
-    x+=15;
-}
-void up(){
-  y-=15;
-}
-void down(){
-  y+=15;
-}
-};
-struct box{
-int x;
-int y;
-int size=10;
-int m=1;
-void render(SDL_Renderer* renderer){
-SDL_Rect filled_rect;
-    filled_rect.x = x;
-    filled_rect.y = y;
-    filled_rect.w = size;
-    filled_rect.h = size;
-    SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255); // green
-    SDL_RenderFillRect(renderer, &filled_rect);
-
-}
-void moves(){
-
-   if ( y<=500 && m==1 ){
-    y+=5;
-    if (y>500){
-        m=0;
-    }
-   } else {
-    y=y-5;
-    if (y<10){
-        m=1;
-    }
-   }
-}
-};
 void waitUntilKeyPressed();
 int main(int argc, char* argv[])
 {    srand(time(0));
@@ -78,15 +21,9 @@ int main(int argc, char* argv[])
 
     initSDL(window, renderer);
     //
-    box Box;
-    Box.x=400;
-    Box.y=10;
-    box boss1;
-    boss1.x=200;
-    boss1.y=300;
-    character boy;
-    boy.x=10;
-    boy.y=200;
+    box Box(400,10);
+    box boss1(200,300);
+    character boy(10,200);
     while(true){
     Box.moves();
     boss1.moves();
