@@ -2,3 +2,4 @@
 game pong 
 Mô tả : game sẽ gồm 2 cây vợt giao bóng qua lại với nhau , ai đạt 10 điểm trước sẽ win. Có 2 mode là 2 người chơi và đánh với máy.
  ps : Hiện tại em đã làm được chức năng 2 người chơi và ghép đồ họa.
+Em thưa thầy hôm nay em đang hoàn thiện nốt , mai em mới up lên git ạ :<< 
