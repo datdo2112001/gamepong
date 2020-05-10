@@ -54,7 +54,8 @@ int main(int argc, char* argv[])
     ///// Từ dòng 27 - 53 mục đích tạo 1 cửa sổ ban đầu , cho phép nhập a vào để bắt đầu game , nếu nhận được tín hiệu a thì sẽ chuyển cảnh.
 
     if (signal == true) {
-        while (true) {
+        bool quit = false;
+        while (quit == false) {
             srand(time(0));
             SDL_RenderClear(renderer);
             //// Từ dòng 60 - 67 khởi tạo các obj về player 1 , player 2 , ball ;
@@ -144,10 +145,13 @@ int main(int argc, char* argv[])
                 SDL_Event m;
                 SDL_Delay(5);
                 if (SDL_PollEvent(&m) == 0) continue;
-                if (m.type == SDL_QUIT) break;
+                if (m.type == SDL_QUIT) {
+                    quit = true;
+                    break;
+                }
                 if (m.type == SDL_KEYDOWN) {
                     switch (m.key.keysym.sym) {
-                    case SDLK_ESCAPE: break;
+                    case SDLK_ESCAPE break;
 
                     case SDLK_BACKSPACE: node = true;
                         break;
