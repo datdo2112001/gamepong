@@ -151,7 +151,7 @@ int main(int argc, char* argv[])
                 }
                 if (m.type == SDL_KEYDOWN) {
                     switch (m.key.keysym.sym) {
-                    case SDLK_ESCAPE break;
+                    case SDLK_ESCAPE : break;
 
                     case SDLK_BACKSPACE: node = true;
                         break;
